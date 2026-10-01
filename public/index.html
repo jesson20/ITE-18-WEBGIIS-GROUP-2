@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Philippine Mangrove Tree Map</title>
+      <link rel="stylesheet" href="css/style.css"/>
+      <link rel="stylesheet" href="ol/ol.css"/>
+      <link rel="stylesheet" href="https://raw.githack.com/walkermatt/ol-layerswitcher/master/dist/ol-layerswitcher.css">
+  </head>
+  <body>
+      <div id="map"></div>
+      <div id="popup" class="ol-popup">
+        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+        <div id="popup-content"></div>
+      </div>
+
+      <div class="attQueryDiv" id="attQueryDiv">
+        <div class="headerDiv" id="headerDiv">
+            <label>Attribute Query</label>
+        </div><br>
+        
+        <label>Select Layer</label>
+        <select name="selectLayer" id="selectLayer">
+        </select><br><br>
+        
+        <label>Select Attribute</label>
+        <select name="selectAttribute" id="selectAttribute">
+        </select><br><br>
+        
+        <label>Select Operator</label>
+        <select name="selectOperator" id="selectOperator">
+        </select><br><br>
+        
+        <label>Enter Value</label>
+        <input type="text" name="enterValue" id="enterValue">
+        </select><br><br>
+        
+        <button type="button" id="attQryRun" class="attQryRun" onclick="attributeQuery()">Run</button>
+    </div>
+
+    <div class="attListDiv" id="attListDiv"></div>
+
+      <script src="ol/ol.js"></script>
+      <script src="https://raw.githack.com/walkermatt/ol-layerswitcher/master/dist/ol-layerswitcher.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="for_ol.js"></script>
+    </body>
+</html>
